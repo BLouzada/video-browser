@@ -5,7 +5,6 @@ import './App.css';
 import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
 import VideoDetail from "./components/video_detail";
-import Promise from "bluebird";
 
 const API_KEY = "AIzaSyCbwLwNN-h4LUgIALLOY38_xaQj0Nq_i4Q";
 
@@ -24,9 +23,7 @@ class App extends Component {
           }
         }
       }
-    };
-    
-    this.videoSearch("surfboards");
+    };    
   }
   
   videoSearch(term) {
@@ -36,7 +33,7 @@ class App extends Component {
           selectedVideo: videos[0]
         });
     });
-  }  
+  }
   
   render() {
     const videoSearch = _.debounce(term => {

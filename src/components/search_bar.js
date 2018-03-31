@@ -6,8 +6,12 @@ class SearchBar extends Component {
 
     this.state = { term: "" };
   }
+  
+  componentWillMount(){
+    this.onInputChange('surfboards')
+  }
 
-  render() {
+  render() {    
     return (
       <div className="search-bar">
         <input
