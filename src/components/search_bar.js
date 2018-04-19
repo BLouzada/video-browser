@@ -6,12 +6,12 @@ class SearchBar extends Component {
 
     this.state = { term: "" };
   }
-  
+
   componentWillMount(){
-    this.onInputChange('surfboards')
+    this.onInputChange('reactjs')
   }
 
-  render() {    
+  render() {
     return (
       <div className="search-bar">
         <input
